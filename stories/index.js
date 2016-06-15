@@ -48,3 +48,15 @@ storiesOf('Button', module)
 
     </div>
   ))
+  .add('Block', () => (
+    <Button kind="neutral" block>Block Button</Button>
+  ))
+  .add('Href', () => (
+    <Button kind="neutral" href="https://google.com">Href Button</Button>
+  ))
+  .add('Classname', () => (
+    <Button kind="neutral" className="fancy-class">Custom Button</Button>
+  ))
+  .add('OnClick', () => (
+    <Button kind="neutral" onClick={console.log('clicky')}>Clicky Button</Button>
+  ))

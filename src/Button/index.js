@@ -26,9 +26,7 @@ const propTypes = {
   href: PropTypes.string,
   kind: PropTypes.oneOf(BUTTON_KINDS),
   onClick: PropTypes.func,
-  size: PropTypes.oneOf(BUTTON_SIZES),
-  type: PropTypes.string,
-  draggable: PropTypes.string
+  size: PropTypes.oneOf(BUTTON_SIZES)
 }
 
 const defaultProps = {
@@ -54,21 +52,13 @@ class Button extends Component {
 
     let { kind } = this.props
 
-    // const classes = classNames(
-    //   'Button',
-    //   `Button--${kind}`,
-    //   `Button--${size}`,
-    //   {'Button--block': block},
-    //   {'Button--disabled': disabled},
-    //   className
-    // )
-
     if (BUTTON_KINDS.indexOf(kind) === -1) kind = BUTTON_KINDS[0]
 
     const classes = classNames(
       styles[kind],
       styles[size],
       {[`${styles.disabled}`]: disabled },
+      {[`${styles.block}`]: block },
       className
     )
 
@@ -77,7 +67,6 @@ class Button extends Component {
 
     let tag = 'button'
     if (href) tag = 'a'
-
 
     if (component) return React.cloneElement(component, props)
 
