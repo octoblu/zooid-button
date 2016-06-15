@@ -1,36 +1,33 @@
-import _ from 'lodash';
-import chai, { expect } from 'chai';
-import chaiEnzyme from 'chai-enzyme';
-import React from 'react';
-import sinon from 'sinon';
-import sinonChai from 'sinon-chai';
-import { mount, shallow } from 'enzyme';
+import chai, { expect } from 'chai'
+import chaiEnzyme from 'chai-enzyme'
+import React from 'react'
+import sinon from 'sinon'
+import sinonChai from 'sinon-chai'
+import { shallow } from 'enzyme'
 
-import Button from './';
+import Button from './'
 import styles from './styles.css'
 
-chai.use(chaiEnzyme());
-chai.use(sinonChai);
+chai.use(chaiEnzyme())
+chai.use(sinonChai)
 
 describe('<Button />', () => {
-
   describe('when kind prop is not set', () => {
     it('should render a default button', () => {
       const sut = shallow(<Button />)
 
-      expect(sut).to.have.className(styles.default);
+      expect(sut).to.have.className(styles.default)
     })
   })
 
   describe('when kind prop is set', () => {
-
     describe('when kind is valid', () => {
       it('should render a Button that includes the kind in the className', () => {
-        const sut = shallow(<Button kind="primary"/>)
+        const sut = shallow(<Button kind="primary" />)
 
-        expect(sut).to.have.className(styles.primary);
-      });
-    });
+        expect(sut).to.have.className(styles.primary)
+      })
+    })
 
     describe('when kind is invalid', () => {
       it('should render a default Button', () => {
@@ -43,7 +40,6 @@ describe('<Button />', () => {
   })
 
   describe('when size prop is set', () => {
-
     describe('when size is invalid', () => {
       it('should render a default sized Button', () => {
         const sut = shallow(<Button size="asdf" />)
@@ -55,11 +51,11 @@ describe('<Button />', () => {
 
     describe('when size is valid', () => {
       it('should render a Button with the set size', () => {
-        const sut = shallow(<Button size="large"/>)
+        const sut = shallow(<Button size="large" />)
 
-        expect(sut).to.have.className(styles.large);
-      });
-    });
+        expect(sut).to.have.className(styles.large)
+      })
+    })
   })
 
   describe('when disabled prop is set', () => {
@@ -82,7 +78,7 @@ describe('<Button />', () => {
 
   describe('when href prop is set', () => {
     it('should render a Button with the href', () => {
-      const sut = shallow(<Button href='/home' />)
+      const sut = shallow(<Button href="/home" />)
 
       expect(sut.prop('href')).to.equal('/home')
     })
@@ -90,7 +86,7 @@ describe('<Button />', () => {
 
   describe('when className prop is set', () => {
     it('should render a Button with the className', () => {
-      const sut = shallow(<Button className='fancy-css' />)
+      const sut = shallow(<Button className="fancy-css" />)
 
       expect(sut.prop('className')).to.contain('fancy-css')
     })
@@ -106,4 +102,4 @@ describe('<Button />', () => {
       expect(handleClick).to.have.been.called
     })
   })
-});
+})

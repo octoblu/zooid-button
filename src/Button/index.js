@@ -15,7 +15,7 @@ const BUTTON_KINDS = [
   'hollow-approve',
   'hollow-danger',
   'hollow-neutral',
-  'no-style'
+  'no-style',
 ]
 
 const propTypes = {
@@ -26,7 +26,7 @@ const propTypes = {
   href: PropTypes.string,
   kind: PropTypes.oneOf(BUTTON_KINDS),
   onClick: PropTypes.func,
-  size: PropTypes.oneOf(BUTTON_SIZES)
+  size: PropTypes.oneOf(BUTTON_SIZES),
 }
 
 const defaultProps = {
@@ -36,9 +36,6 @@ const defaultProps = {
 }
 
 class Button extends Component {
-  constructor(props) {
-    super(props)
-  }
 
   render() {
     const {
@@ -47,7 +44,7 @@ class Button extends Component {
       component,
       disabled,
       href,
-      size
+      size,
     } = this.props
 
     let { kind } = this.props
@@ -57,12 +54,20 @@ class Button extends Component {
     const classes = classNames(
       styles[kind],
       styles[size],
-      {[`${styles.disabled}`]: disabled },
-      {[`${styles.block}`]: block },
+      { [`${styles.disabled}`]: disabled },
+      { [`${styles.block}`]: block },
       className
     )
 
-    let props = blacklist(this.props, 'block', 'className', 'component', 'disabled', 'kind', 'size')
+    const props = blacklist(this.props,
+      'block',
+      'className',
+      'component',
+      'disabled',
+      'kind',
+      'size'
+    )
+
     props.className = classes
 
     let tag = 'button'
