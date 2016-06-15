@@ -1,5 +1,12 @@
 const jsdom = require('jsdom').jsdom;
+const hook = require('css-modules-require-hook')
 const exposedProperties = ['window', 'navigator', 'document'];
+
+
+hook({
+  extensions: [ '.css' ],
+  generateScopedName: '[local]___[hash:base64:5]',
+})
 
 global.document = jsdom('');
 global.window = document.defaultView;

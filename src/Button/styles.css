@@ -1,4 +1,4 @@
-.Button {
+.default {
   display: inline-block;
   border:none;
   border-radius: 2px;
@@ -20,46 +20,171 @@
   transition-property: background, border-color;
 }
 
-.Button:focus {
+.default:focus {
   outline: none;
 }
+
+.default[disabled],
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+
+.primary {
+  composes: default;
+
+  background: #14568F;
+  color: white;
+}
+
+.primary:hover {
+  background: #104B7E;
+}
+
+
+.approve {
+  composes: default;
+
+  background: #008000;
+  color: white;
+}
+
+.approve:hover {
+  background: #017401;
+}
+
+.danger {
+  composes: default;
+
+  background: #CA2329;
+  color: white;
+}
+
+.danger:hover {
+  background: #B72126;
+}
+
+
+.neutral {
+  composes: default;
+
+  background: #6e798b;
+  color: white;
+}
+
+.hollow-primary {
+  composes: default;
+
+  border: 2px solid #14568F;
+  color: #14568F;
+  padding: 10px 22px;
+  background: transparent;
+}
+
+.hollow-primary:hover {
+  background: rgba(45, 114, 217, 0.07);
+}
+
+.hollow-approve {
+  composes: default;
+
+  border: 2px solid #008000;
+  color: #008000;
+  padding: 10px 22px;
+  background: transparent;
+}
+
+.hollow-approve:hover {
+  background: rgba(0, 128, 0, 0.07);
+}
+
+.hollow-danger {
+  composes: default;
+
+  border: 2px solid #CA2329;
+  color: #CA2329;
+  padding: 10px 22px;
+  background: transparent;
+}
+
+.hollow-danger:hover {
+  background: rgba(202, 35, 41, 0.07);
+}
+
+.hollow-neutral {
+  composes: default;
+
+  border: 2px solid #6e798b;
+  color: #6e798b;
+  padding: 10px 22px;
+  background: transparent;
+}
+
+.hollow-neutral:hover {
+  background: rgba(110, 121, 139, 0.1);
+}
+
+
+.no-style {
+  composes: default;
+
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+
+  color: #14568F;
+  text-align: left;
+
+  background: transparent;
+}
+
+.no-style:hover {
+  color: #156889;
+}
+
+
+.small {
+  font-size: 12px;
+}
+
+.large {
+  font-size: 22px;
+}
+
+.jumbo {
+  width: 100%;
+  padding: 24px;
+
+  color: #FFF;
+  font-size: 21px;
+  font-family: 'citrixsans-semibold', sans-serif;
+  text-decoration: none;
+
+  background: #0091de;
+}
+
+.jumbo:hover {
+  background: #0075c4;
+  color: #FFF;
+}
+
+/*
 
 .Button--block {
   width: 100%;
 }
+*/
 
-button[disabled],
+
+/*
+default[disabled],
 .Button--disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
 
-.Button--primary {
-  background: #14568F;
-  color: white;
-}
-
-.Button--primary:hover {
-  background: #104B7E;
-}
-
-.Button--approve {
-  background: #008000;
-  color: white;
-}
-
-.Button--approve:hover {
-  background: #017401;
-}
-
-.Button--danger {
-  background: #CA2329;
-  color: white;
-}
-
-.Button--danger:hover {
-  background: #B72126;
-}
 
 .Button--neutral {
   background: #6e798b;
@@ -125,28 +250,4 @@ button[disabled],
 .Button--no-style:hover {
   color: #156889;
 }
-
-.Button--small {
-  font-size: 12px;
-}
-
-.Button--large {
-  font-size: 22px;
-}
-
-.Button--jumbo {
-  width: 100%;
-  padding: 24px;
-
-  color: #FFF;
-  font-size: 21px;
-  font-family: 'citrixsans-semibold', sans-serif;
-  text-decoration: none;
-
-  background: #0091de;
-}
-
-.Button--jumbo:hover {
-  background: #0075c4;
-  color: #FFF;
-}
+*/
