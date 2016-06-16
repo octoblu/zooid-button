@@ -18,7 +18,7 @@ npm install --save zooid-button
 
 
 ## Example
-```
+```js
 import React, { Component } from 'react'
 import Button from 'zooid-button'
 
