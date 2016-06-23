@@ -1,6 +1,11 @@
 # zooid-button
 React Button Component
 
+[![Build Status](https://travis-ci.org/octoblu/zooid-button.svg?branch=master)](https://travis-ci.org/octoblu/zooid-button)
+[![npm version](https://badge.fury.io/js/zooid-button.svg)](http://badge.fury.io/js/zooid-button)
+[![Code Climate](https://codeclimate.com/github/octoblu/zooid-button.png)](https://codeclimate.com/github/octoblu/zooid-button)
+[![Slack Status](http://community-slack.octoblu.com/badge.svg)](http://community-slack.octoblu.com)
+
 ## Install
 ```
 npm install --save zooid-button

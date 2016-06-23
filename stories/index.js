@@ -1,7 +1,7 @@
-import React from 'react';
-import { storiesOf, action } from '@kadira/storybook';
+import React from 'react'
+import { storiesOf, action } from '@kadira/storybook'
 
-import Button from '../src';
+import Button from '../src'
 
 storiesOf('Button', module)
   .add('Styles', () => (
@@ -58,5 +58,5 @@ storiesOf('Button', module)
     <Button kind="neutral" className="fancy-class">Custom Button</Button>
   ))
   .add('OnClick', () => (
-    <Button kind="neutral" onClick={console.log('clicky')}>Clicky Button</Button>
+    <Button kind="neutral" onClick={action('clicky')}>Clicky Button</Button>
   ))

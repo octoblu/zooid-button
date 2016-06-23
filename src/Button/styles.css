@@ -1,21 +1,18 @@
 .default {
   display: inline-block;
-  border:none;
+  border: none;
   border-radius: 2px;
   padding: 0.6em 1em;
-
-  background: #E3E3E3;
-
+  background: #e3e3e3;
   font-size: 16px;
   font-family: "citrixsans-regular", Arial, Helvetica, sans-serif;
   text-align: center;
   text-decoration: none;
-
   cursor: pointer;
   user-select: none;
   appearance: none;
   transition-delay: 0;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   transition-timing-function: ease-in;
   transition-property: background, border-color;
 }
@@ -32,18 +29,16 @@
 
 .primary {
   composes: default;
-
-  background: #14568F;
+  background: #14568f;
   color: white;
 }
 
 .primary:hover {
-  background: #104B7E;
+  background: #104b7e;
 }
 
 .approve {
   composes: default;
-
   background: #008000;
   color: white;
 }
@@ -54,27 +49,24 @@
 
 .danger {
   composes: default;
-
-  background: #CA2329;
+  background: #ca2329;
   color: white;
 }
 
 .danger:hover {
-  background: #B72126;
+  background: #b72126;
 }
 
 .neutral {
   composes: default;
-
   background: #6e798b;
   color: white;
 }
 
 .hollow-primary {
   composes: default;
-
-  border: 2px solid #14568F;
-  color: #14568F;
+  border: 2px solid #14568f;
+  color: #14568f;
   padding: 10px 22px;
   background: transparent;
 }
@@ -85,7 +77,6 @@
 
 .hollow-approve {
   composes: default;
-
   border: 2px solid #008000;
   color: #008000;
   padding: 10px 22px;
@@ -98,9 +89,8 @@
 
 .hollow-danger {
   composes: default;
-
-  border: 2px solid #CA2329;
-  color: #CA2329;
+  border: 2px solid #ca2329;
+  color: #ca2329;
   padding: 10px 22px;
   background: transparent;
 }
@@ -111,7 +101,6 @@
 
 .hollow-neutral {
   composes: default;
-
   border: 2px solid #6e798b;
   color: #6e798b;
   padding: 10px 22px;
@@ -124,15 +113,12 @@
 
 .no-style {
   composes: default;
-
   border: none;
   border-radius: 0;
   padding: 0;
   margin: 0;
-
-  color: #14568F;
+  color: #14568f;
   text-align: left;
-
   background: transparent;
 }
 
@@ -151,18 +137,16 @@
 .jumbo {
   width: 100%;
   padding: 24px;
-
-  color: #FFF;
+  color: #fff;
   font-size: 21px;
   font-family: 'citrixsans-semibold', sans-serif;
   text-decoration: none;
-
   background: #0091de;
 }
 
 .jumbo:hover {
   background: #0075c4;
-  color: #FFF;
+  color: #fff;
 }
 
 .block {
