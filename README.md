@@ -3,7 +3,7 @@ React Button Component
 
 [![Build Status](https://travis-ci.org/octoblu/zooid-button.svg?branch=master)](https://travis-ci.org/octoblu/zooid-button)
 [![npm version](https://badge.fury.io/js/zooid-button.svg)](http://badge.fury.io/js/zooid-button)
-[![Slack Status](https://slack.octoblu-community.com/badge.svg)](https://octoblu-community.slack.com)
+[![Slack Status](https://slack.octoblu-community.com/badge.svg)](https://community-slack.octoblu.com)
 
 ## Install
 ```
