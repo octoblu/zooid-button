@@ -3,6 +3,13 @@ node_js:
 - '5'
 before_deploy:
 - npm run build
+addons:
+  code_climate:
+    repo_token: 44eee1f4893752df2d19d19818f3b94ae3d4daff51d2f866c70f0deab98d8db6
+before_script:
+- npm install -g codeclimate-test-reporter
+after_script:
+- codeclimate-test-reporter < coverage/lcov.info
 deploy:
   provider: npm
   email: serveradmin@octoblu.com
