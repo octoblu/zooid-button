@@ -27,6 +27,16 @@ storiesOf('Button', module)
       <Button kind="neutral" size="large">Large Button</Button>
       <Button kind="neutral" size="regular">Regular Button</Button>
       <Button kind="neutral" size="small">Small Button</Button>
+
+      <h4>Hollow Buttons</h4>
+      <Button kind="hollow-neutral" size="large">Large Hollow Neutral Button</Button>
+      <Button kind="hollow-neutral" size="regular">Regular Hollow Neutral Button</Button>
+      <Button kind="hollow-neutral" size="small">Small Hollow Neutral Button</Button>
+
+      <h4>Unstyled Button</h4>
+      <Button kind="no-style" size="large">Large No Style Button</Button>
+      <Button kind="no-style" size="regular">Regular No Style Button</Button>
+      <Button kind="no-style" size="small">Small No Style Button</Button>
     </div>
   ))
   .add('Disabled', () => (
