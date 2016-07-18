@@ -1,6 +1,7 @@
 import blacklist from 'blacklist'
 import classNames from 'classnames'
 import React, { Component, PropTypes } from 'react'
+import LoadingIndicator from '../LoadingIndicator'
 
 import styles from './styles.css'
 
@@ -25,6 +26,7 @@ const propTypes = {
   disabled: PropTypes.bool,
   href: PropTypes.string,
   kind: PropTypes.oneOf(BUTTON_KINDS),
+  loading: PropTypes.bool,
   onClick: PropTypes.func,
   size: PropTypes.oneOf(BUTTON_SIZES),
 }
@@ -32,6 +34,7 @@ const propTypes = {
 const defaultProps = {
   disabled: false,
   kind: BUTTON_KINDS[0],
+  loading: false,
   size: BUTTON_SIZES[0],
 }
 
@@ -44,6 +47,7 @@ class Button extends Component {
       component,
       disabled,
       href,
+      loading,
       size,
     } = this.props
 
@@ -54,28 +58,32 @@ class Button extends Component {
     const classes = classNames(
       styles[kind],
       styles[size],
-      { [`${styles.disabled}`]: disabled },
       { [`${styles.block}`]: block },
       className
     )
 
-    const props = blacklist(this.props,
+    const sanitizedProps = blacklist(this.props,
       'block',
       'className',
       'component',
-      'disabled',
       'kind',
+      'loading',
       'size'
     )
 
-    props.className = classes
+    sanitizedProps.className = classes
 
     let tag = 'button'
     if (href) tag = 'a'
 
-    if (component) return React.cloneElement(component, props)
+    if (component) return React.cloneElement(component, sanitizedProps)
 
-    return React.createElement(tag, props, props.children)
+    if (loading) {
+      sanitizedProps.children = <LoadingIndicator />
+      sanitizedProps.disabled = true
+    }
+
+    return React.createElement(tag, sanitizedProps, sanitizedProps.children)
   }
 }
 

@@ -21,9 +21,7 @@
   outline: none;
 }
 
-.default[disabled],
-.disabled {
-  cursor: not-allowed;
+.default:disabled {
   opacity: 0.5;
 }
 

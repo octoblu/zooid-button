@@ -1,9 +1,10 @@
 import chai, { expect } from 'chai'
 import chaiEnzyme from 'chai-enzyme'
+import { mount, shallow } from 'enzyme'
 import React from 'react'
 import sinon from 'sinon'
 import sinonChai from 'sinon-chai'
-import { shallow } from 'enzyme'
+import LoadingIndicator from '../LoadingIndicator'
 
 import Button from './'
 import styles from './styles.css'
@@ -62,7 +63,6 @@ describe('<Button />', () => {
     it('should render a disabled Button', () => {
       const sut = shallow(<Button disabled />)
 
-      expect(sut).to.have.className(styles.disabled)
       expect(sut).to.have.className(styles.default)
     })
   })
@@ -100,6 +100,22 @@ describe('<Button />', () => {
       sut.simulate('click')
 
       expect(handleClick).to.have.been.called
+    })
+  })
+
+  describe('when loding prop is set or truthy', () => {
+    let sut
+
+    beforeEach(() => {
+      sut = shallow(<Button loading />)
+    })
+
+    it('should render a Button with loding state', () => {
+      expect(sut).to.contain(<LoadingIndicator />)
+    })
+
+    it('should render a Button with a disabled state', () => {
+      expect(sut).to.have.prop('disabled').equal(true)
     })
   })
 })

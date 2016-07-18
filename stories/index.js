@@ -55,7 +55,6 @@ storiesOf('Button', module)
 
       <h4>Unstyled Button</h4>
       <Button kind="no-style" disabled>No Style Button</Button>
-
     </div>
   ))
   .add('Block', () => (
@@ -66,6 +65,24 @@ storiesOf('Button', module)
   ))
   .add('Classname', () => (
     <Button kind="neutral" className="fancy-class">Custom Button</Button>
+  ))
+  .add('Loading', () => (
+    <div>
+      <Button loading>Button</Button>
+      <Button kind="primary" loading>Primary Button</Button>
+      <Button kind="approve" loading>Approve Button</Button>
+      <Button kind="danger" loading>Danger Button</Button>
+      <Button kind="neutral" loading>Neutral Button</Button>
+
+      <h4>Hollow Buttons</h4>
+      <Button kind="hollow-primary" loading>Hollow Primary Button</Button>
+      <Button kind="hollow-approve" loading>Hollow Approve Button</Button>
+      <Button kind="hollow-danger" loading>Hollow Danger Button</Button>
+      <Button kind="hollow-neutral" loading>Hollow Neutral Button</Button>
+
+      <h4>Unstyled Button</h4>
+      <Button kind="no-style" loading>No Style Button</Button>
+    </div>
   ))
   .add('OnClick', () => (
     <Button kind="neutral" onClick={action('clicky')}>Clicky Button</Button>
