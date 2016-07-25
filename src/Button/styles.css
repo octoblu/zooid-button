@@ -12,7 +12,7 @@
   user-select: none;
   appearance: none;
   transition-delay: 0;
-  transition-duration: 0.3s;
+  transition-duration: 0.2s;
   transition-timing-function: ease-in;
   transition-property: background, border-color;
 }
@@ -25,6 +25,10 @@
   opacity: 0.5;
 }
 
+.default:hover {
+  text-decoration: none;
+}
+
 .primary {
   composes: default;
   background: #14568f;
@@ -33,7 +37,6 @@
 
 .primary:hover {
   background: #104b7e;
-  color: white;
 }
 
 .approve {
@@ -44,7 +47,6 @@
 
 .approve:hover {
   background: #017401;
-  color: white;
 }
 
 .danger {
@@ -55,7 +57,6 @@
 
 .danger:hover {
   background: #b72126;
-  color: white;
 }
 
 .neutral {
