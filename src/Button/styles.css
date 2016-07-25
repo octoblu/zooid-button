@@ -33,6 +33,7 @@
 
 .primary:hover {
   background: #104b7e;
+  color: white;
 }
 
 .approve {
@@ -43,6 +44,7 @@
 
 .approve:hover {
   background: #017401;
+  color: white;
 }
 
 .danger {
@@ -53,6 +55,7 @@
 
 .danger:hover {
   background: #b72126;
+  color: white;
 }
 
 .neutral {
