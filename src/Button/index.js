@@ -45,7 +45,6 @@ class Button extends Component {
       block,
       className,
       component,
-      disabled,
       href,
       loading,
       size,
