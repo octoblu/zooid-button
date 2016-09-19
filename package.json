@@ -87,7 +87,7 @@
     "enzyme": "^2.4.0",
     "process-nextick-args": "^1.0.7",
     "react": "^15.0.1",
-    "sinon": "^1.17.4",
+    "sinon": "^1.17.6",
     "sinon-chai": "^2.8.0"
   }
 }
