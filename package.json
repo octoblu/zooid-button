@@ -45,6 +45,9 @@
       "src/**/*.css"
     ]
   },
+  "greenkeeper": {
+    "emails": false
+  },
   "devDependencies": {
     "babel-cli": "^6.16.0",
     "babel-core": "^6.17.0",
