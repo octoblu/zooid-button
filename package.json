@@ -87,7 +87,7 @@
     "chai": "^3.5.0",
     "chai-enzyme": "^0.5.2",
     "classnames": "^2.2.5",
-    "enzyme": "^2.4.0",
+    "enzyme": "^2.5.0",
     "process-nextick-args": "^1.0.7",
     "react": "^15.3.2",
     "sinon": "^1.17.6",
