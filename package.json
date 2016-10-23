@@ -77,7 +77,7 @@
     "rimraf": "^2.5.4",
     "style-loader": "^0.13.1",
     "stylefmt": "^4.2.0",
-    "stylelint": "^7.3.1",
+    "stylelint": "^7.4.1",
     "stylelint-config-standard": "^14.0.0",
     "webpack": "^1.13.0"
   },
