@@ -46,7 +46,9 @@
       "react"
     ],
     "plugins": [
-      ["styled-components"]
+      [
+        "styled-components"
+      ]
     ]
   },
   "dependencies": {
@@ -55,10 +57,15 @@
   "devDependencies": {
     "@kadira/storybook": "^2.35.3",
     "babel-core": "^6.24.0",
+    "babel-eslint": "^7.2.1",
     "babel-loader": "^6.4.1",
     "babel-plugin-styled-components": "^1.1.1",
     "babel-preset-latest": "^6.24.0",
     "babel-preset-react": "^6.23.0",
+    "eslint": "^3.18.0",
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-react": "^6.10.3",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "webpack": "^2.3.2"
