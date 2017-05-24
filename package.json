@@ -85,7 +85,7 @@
     "@kadira/storybook": "^2.28.1",
     "blacklist": "^1.1.2",
     "chai": "^3.5.0",
-    "chai-enzyme": "^0.6.0",
+    "chai-enzyme": "^0.7.1",
     "classnames": "^2.2.5",
     "enzyme": "^2.5.1",
     "process-nextick-args": "^1.0.7",
